@@ -8,5 +8,6 @@ public class reduplikation {
         for(int i = 0; i < count; i++) {
             System.out.print(s);
         }
+        sc.close();
     }
 }

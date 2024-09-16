@@ -7,5 +7,6 @@ public class millifaersla {
         int f = sc.nextInt();
         int d = sc.nextInt();
         System.out.println((m < d && m < f) ? "Monnei" : (f < m && f < d) ? "Fjee" : "Dolladollabilljoll");
+        sc.close();
     }
 }

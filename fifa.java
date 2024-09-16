@@ -5,5 +5,6 @@ public class fifa {
         Scanner sc = new Scanner(System.in);
         int start = 2022;
         System.out.println(start + (sc.nextInt() / sc.nextInt()));
+        sc.close();
     }
 }

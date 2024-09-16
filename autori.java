@@ -6,5 +6,6 @@ class autori {
         sc.useDelimiter("-");
         String s = sc.next();
         System.out.println(s);
+        sc.close();
     }
 }
