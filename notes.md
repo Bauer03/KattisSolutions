@@ -1,5 +1,5 @@
  ### Teams
- - We'll split into two teams for the ICPC
+ - Two teams set up for now:
     - Team 1: Caleb Early, Jory James, Paul Bauer
     - Team 2: Cornelius Bartels, Butler Frank, Amir Suboh
  - No restrictions on who types. If you're better at typing, type. If you're better at thinking, think. If you're Caleb, do both.
