@@ -49,6 +49,7 @@ public class g2048 {
             }
             System.out.println();
         }
+        sc.close();
     }
 }
 
