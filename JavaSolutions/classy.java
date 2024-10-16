@@ -19,15 +19,13 @@ public class classy {
                 String[] bufferLine = line[1].split(" ");
                 String[] temp = bufferLine[0].split("-");
                 
+                Collections.reverse(Arrays.asList(temp));
+
                 String[] socialClass = new String[10];
-                for(int l = 0; l < temp.length; l++) {
-                    socialClass[l] = temp[l];
-                }
+                for(int l = 0; l < temp.length; l++) socialClass[l] = temp[l];
 
                 int len = temp.length;
                 while(len < 10) socialClass[len++] = "middle";
-
-                Collections.reverse(Arrays.asList(socialClass));
 
                 PeopleThingy temp2 = new PeopleThingy(name, socialClass);
                 temp2.calcSum();
@@ -52,8 +50,8 @@ public class classy {
 }
 
 class PeopleThingy implements Comparable<PeopleThingy>{
-    PeopleThingy(String name, String[] steve) {
-        this.name = name;
+    PeopleThingy(String bob, String[] steve) {
+        this.name = bob;
         this.socialClass = steve;
     }
 
@@ -65,7 +63,7 @@ class PeopleThingy implements Comparable<PeopleThingy>{
     public int compareTo(PeopleThingy other) {
         if(this.sum > other.sum) return 1;
         else if(this.sum < other.sum) return -1;
-        else return this.name.compareTo(other.name);
+        else return other.name.compareTo(this.name);
     }
 
     public void calcSum() {
@@ -73,13 +71,13 @@ class PeopleThingy implements Comparable<PeopleThingy>{
         for(int i = 0; i < 10; i++) {
             switch (socialClass[i]) {
                 case "upper":
-                    sum += (3 * Math.pow(10,i));
+                    this.sum += (3 * Math.pow(10,9-i));
                     break;
                 case "middle":
-                    sum += (2 * Math.pow(10,i));
+                    this.sum += (2 * Math.pow(10,9-i));
                     break;
                 case "lower":
-                    sum += (1 * Math.pow(10, i));
+                    this.sum += (1 * Math.pow(10, 9-i));
                     break;
                 default:
                     System.out.println("AAAA big error");
@@ -88,20 +86,3 @@ class PeopleThingy implements Comparable<PeopleThingy>{
         }
     }
 }
-
-// 1
-// 5
-// mom: upper-upper-lower-middle class
-// dad: middle-middle-middle-lower-middle class
-// queenelizabeth: upper-upper-upper class
-// chair: lower-lower class
-// unclebob: middle-middle-lower-middle class
-
-// 1
-// 6
-// mom: upper-upper-lower-middle class
-// dad: middle-middle-middle-lower-middle class
-// queenelizabeth: upper-upper-upper class
-// chair: lower-lower class
-// unclebob: middle-middle-lower-middle class
-// paul: upper class
