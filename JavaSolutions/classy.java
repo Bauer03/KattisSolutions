@@ -11,8 +11,7 @@ public class classy {
             int numPeople = Integer.parseInt(sc.nextLine());
             PeopleThingy[] result = new PeopleThingy[numPeople];
 
-            // reading in the data
-            for(int k = 0; k < numPeople; k ++) { // this loop makes a new person and adds it to the array
+            for(int k = 0; k < numPeople; k ++) {
                 String[] line = sc.nextLine().split(": ");
                 String name = line[0];
 
@@ -32,13 +31,9 @@ public class classy {
                 result[k] = temp2;
             }
 
-            // sort the array
             Arrays.sort(result);
-
-            // reversing
             Collections.reverse(Arrays.asList(result));
 
-            // printing out the array
             for(PeopleThingy p : result) {
                 System.out.println(p.name);
             }
