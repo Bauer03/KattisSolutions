@@ -38,7 +38,25 @@ public class g2048 {
             for(int j = 0; j < 4; j++) for(int i = 3; i > 0; i--) {
                 // iterating through from left column to right column (although this does not really matter).
                 // inner loop: iterating through from bottom to top (this matters)
-                // that someone said no something. 43 that's the journalist in tony. everybody back off tony.
+                if(board[j][i-1] != 0 && board[j][i] == board[j][i-1]) {
+                    board[j][i-1] *= 2;
+                    if(board[j][i+1] != 0 && i<3) {
+                        board[j][i] = board[j][i+1];
+                        board[j][i+1] = 0;
+                        if(i < 2 && board[j][i+2] != 0 && board[j][i+1] == 0) {
+                            board[j][i+2] = board[j][i+1] = board[j][i+2];
+                            board[j][i+2] = 0;
+                        }
+                    } else board[j][i] = 0;
+                } else if (board[j][i-1] == 0) {
+                    if(board[j][i] == 0 && board[j][i+1] != 0) {
+                        board[j][i] = board[j][i+1];
+                        board[j][i+1] = 0;
+                    } else {
+                        board[j][i-1] = board[j][i];
+                        board[j][i] = 0;
+                    }
+                }
             }
         }
 
