@@ -30,7 +30,7 @@
 ### Meetings
  - We meet Wed 4-5pm, MCK 226
  - Figuring out how to set up meetings today. 
- - I suggest getting into two teams (groups of 3 or not doens't matter, since I assume there will be roughly 7 of us we can do 3 & 4)
+ - I suggest getting into two teams (groups of 3 or not doesn't matter, since I assume there will be roughly 7 of us we can do 3 & 4)
  - Solve 1-2 problems in the hour we have. Set 25-minute time limit, and at the end of that, if we haven't solved problems, 
 
 ### Outside of meetings
