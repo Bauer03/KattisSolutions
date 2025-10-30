@@ -5,5 +5,9 @@ public class trafficlights {
         Scanner sc = new Scanner(System.in);
 
         int numlights = sc.nextInt();
+
+        for(int i = 0; i < numlights; i++) {
+            
+        }
     }
 }
